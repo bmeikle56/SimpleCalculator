@@ -1,6 +1,14 @@
 #Simple Calculator
 
+#strings that begin or end with an operation are invalid
+#number of parentheses %2=0 and #( = #)
+#() is ignored
+#Operation object is 
+
 class SimpleCalculator:
+    def __init__():
+        pass
+
     def main():
         print("Welcome to SimpleCalculator\n")
         inp = input("Enter your 4-function calculation: ")
@@ -30,5 +38,4 @@ class SimpleCalculator:
             #case 
         pass #to avoid error
 
-    main()
 
