@@ -69,12 +69,7 @@ class SimpleCalculator:
         return newStr
 
     def interpret(self):
-        rawStr = getOpStr(self)
-        
-        #eliminate white space to make it simpler
-        str = __removeWhiteSpace(rawStr)
-
-
+        newStr = __parseString(self)
             
         
 
