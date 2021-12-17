@@ -5,7 +5,7 @@
 #() is ignored
 #Operation object is 
 
-from Exceptions import DivideByZeroError, ParenthesesSyntaxError
+from Exceptions import DivideByZeroError, OperatorSyntaxError, ParenthesesSyntaxError
 
 
 class SimpleCalculator:
@@ -15,6 +15,21 @@ class SimpleCalculator:
 
     def getOpStr(self):
         return self.operation
+
+    def __isOperator(char):
+        #private method
+        #send this method only one character
+        match char:
+            case "*":
+                return True
+            case "/":
+                return True
+            case "+":
+                return True
+            case "-":
+                return True
+            case _:
+                return False
 
     def __parseString(rawStr):
         #private method
@@ -35,7 +50,8 @@ class SimpleCalculator:
                 if (numOfParen < 0):
                     #) without a ( before it
                     break #failure
-                elif (lastChar)
+                elif (__isOperator(lastChar) & isOperator(rawStr[i])):
+                    raise OperatorSyntaxError() #failure
                 elif (rawStr[i] != ' '):
                     newStr += rawStr[i]
                 if (rawStr[i] == '('):
@@ -47,6 +63,8 @@ class SimpleCalculator:
                 raise ParenthesesSyntaxError() #failure
         except ParenthesesSyntaxError as p:
             print(p.message)
+        except OperatorSyntaxError as o:
+            print(o.message)
         
         return newStr
 
