@@ -121,25 +121,12 @@
  #   x: int
  #   y: int
 
-#def where_is(point):
- #   match point:
- #       case Point(x=0, y=0):
- #           print("Origin")
- #       case Point(x=0, y=y):
-  #          print(f"Y={y}")
-  #      case Point(x=x, y=0):
- #           print(f"X={x}")
-#        case Point():
-#            print("Somewhere else")
- #       case _:
- #           print("Not a point")
-
 
 # __init__() function gets called whenever a new object of a class
 # is instantiated --> constructor in Java
 
 #class ComplexNumber:
-#    def __init__(self, r=0, i=0):
+#    def __init__(self, r, i):
 #        self.real = r
 #        self.imag = i
 
